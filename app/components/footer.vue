@@ -1,20 +1,19 @@
 <template>
-  <footer class="bg-[#0B0F19] text-white border-t border-white/10 pt-16 pb-12 font-sans antialiased">
+  <footer class="bg-miori-navy text-white border-t border-white/10 pt-16 pb-12 font-sans antialiased">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12">
         <div class="md:col-span-5 space-y-6">
           <NuxtLink to="/" class="inline-block">
-            <NuxtImg src="/images/logo-skyfelis.png" format="webp" alt="汐猫みお 公式ロゴ" loading="lazy"
-              class="w-44 brightness-0 invert opacity-90 transition-opacity hover:opacity-100" />
+            <img src="/images/miori-logo.webp" width="1086" height="362" alt="深瀬みおり" class="w-44" />
           </NuxtLink>
 
           <p class="text-xs text-slate-400 leading-relaxed tracking-wide max-w-sm">
-            本業である研究活動の傍ら、プログラミングやセキュリティ、<br />大好きなゲームや旅行のログを気ままに発信する、青い世界の猫 Virtual YouTuber「汐猫みお」の公式ポータルサイトです。
+            本業である研究活動の傍ら、プログラミングやセキュリティ、<br />大好きなゲームや旅行のログを気ままに発信する、青い世界の猫 Virtual YouTuber「深瀬みおり」の公式ポータルサイトです。
           </p>
 
           <div class="space-y-2.5 pt-2">
             <a v-for="item in socialNavigation" :key="item.href" :href="item.href" target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2.5 text-xs text-slate-400 hover:text-[#00CCFF] transition-colors">
+              class="flex items-center gap-2.5 text-xs text-slate-400 hover:text-miori-blush transition-colors">
               <i :class="item.icon" class="text-sm w-4 text-center" aria-hidden="true"></i>
               <span class="font-bold tracking-wider">{{ item.label }} / @skyfelis</span>
               <span class="sr-only">（新しいタブ）</span>
@@ -24,7 +23,7 @@
 
         <nav class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 md:pl-8" aria-label="フッターナビゲーション">
           <div v-for="group in footerNavigation" :key="group.label" class="space-y-4">
-            <h2 class="text-xs font-mono font-bold tracking-[0.2em] text-[#00CCFF] uppercase">
+            <h2 class="text-xs font-mono font-bold tracking-[0.2em] text-miori-blush uppercase">
               // {{ group.label }}
             </h2>
             <ul class="space-y-3 text-sm font-medium text-slate-300">
@@ -59,7 +58,7 @@
         </div>
 
         <div class="text-xs font-mono text-slate-500 tracking-wider">
-          &copy; 2026 Shione Mio
+          &copy; 2026 Fukase Miori
         </div>
       </div>
     </div>

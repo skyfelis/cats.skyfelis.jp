@@ -15,10 +15,11 @@ definePageMeta({
   year: "2026",
   date: "05.27",
   sortKey: "20260527",
+  thumbnail: "/images/banner.png",
   category: "お知らせ", // バッジに表示したいテキストをここに書くだけ！
 });
 
 useSeoMeta({
-  title: "公式サイトリニューアルのお知らせ / 2026-05-27 | 汐猫みお Official",
+  title: "公式サイトリニューアルのお知らせ / 2026-05-27 | 深瀬みおり Official",
 });
 </script>

@@ -1,79 +1,66 @@
 <template>
-  <section id="activity"
-    class="bg-[#002058] py-24 px-6 transition-all duration-[1000ms] ease-out transform font-sans antialiased relative z-35">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
-        <div class="lg:col-span-4 flex flex-col items-start select-none">
-          <div class="w-12 h-1 bg-gradient-to-r from-[#0078B8] to-white/10 rounded-full mb-4"></div>
-
-          <h2 class="text-4xl md:text-5xl font-sans font-bold tracking-wider text-white leading-none">
-            News
-          </h2>
-
-          <p class="text-xs font-sans font-bold text-[#0078B8] tracking-widest pt-3">
-            最新情報
-          </p>
-        </div>
-
-        <div class="lg:col-span-8 divide-y divide-slate-700/50">
-          <NuxtLink v-for="item in latestNews" :key="item.id" :to="item.path"
-            class="py-6 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-12 group cursor-pointer block">
-            <div class="flex items-baseline font-mono text-white select-none min-w-[140px]">
-              <span class="text-xs opacity-60 font-medium mr-1">{{ item.year }}.</span>
-              <span class="text-2xl md:text-3xl font-black tracking-tight">{{
-                item.date
-                }}</span>
+  <section id="activity" class="news-section" aria-labelledby="home-news-title">
+    <div class="section-container">
+      <header class="news-heading">
+        <h2 id="home-news-title">News <small lang="ja">ニュース</small></h2>
+        <NuxtLink to="/news" class="news-index">一覧を見る <span aria-hidden="true">→</span></NuxtLink>
+      </header>
+      <ul class="news-list">
+        <li v-for="item in latestNews" :key="item.path">
+          <NuxtLink :to="item.path" class="news-row">
+            <time :datetime="item.year + '-' + item.date.replace('.', '-')">{{ item.year }}.{{ item.date }}</time>
+            <div class="news-copy">
+              <span class="news-category">{{ item.category }}</span>
+              <h3>{{ item.title }}</h3>
             </div>
-
-            <div class="flex-1">
-              <h3
-                class="text-sm md:text-base font-sans font-medium text-slate-200 group-hover:text-[#0078B8] transition-colors duration-300 leading-relaxed">
-                {{ item.title }}
-              </h3>
-            </div>
+            <NuxtImg v-if="item.thumbnail" :src="item.thumbnail" width="560" height="315" fit="contain"
+              format="webp" loading="lazy" alt="" class="news-thumbnail" />
           </NuxtLink>
-        </div>
-      </div>
-
-      <div class="mt-16 flex justify-center">
-        <NuxtLink to="/news"
-          class="bg-white text-[#002058] hover:bg-[#0078B8] hover:text-[#002058] px-10 py-3.5 rounded-full font-sans font-bold text-xs tracking-widest transition-all duration-300 shadow-lg flex items-center gap-3 group">
-          最新情報一覧
-          <i
-            class="fa-solid fa-arrow-right text-[10px] transition-transform duration-300 group-hover:translate-x-1"></i>
-        </NuxtLink>
-      </div>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-
-import { useRouter } from "vue-router";
-
-const router = useRouter();
-
-// app/components/News.vue (または該当のコンポーネントファイル)
-const latestNews = router
-  .getRoutes()
-  .filter((r) => r.path.startsWith("/news/posts/") && r.meta.sortKey)
-  .map((r) => ({
-    id: r.path,
-    path: r.path,
-    title: r.meta.title as string,
-    year: r.meta.year as string,
-    date: r.meta.date as string,
-    sortKey: r.meta.sortKey as string,
-  }))
-  .sort((a, b) => {
-    // まずは日付（sortKey）の降順で比較
-    const compareSortKey = b.sortKey.localeCompare(a.sortKey);
-    if (compareSortKey !== 0) return compareSortKey;
-
-    // ★【回路拡張】同じ日付の場合はファイル名の降順で決着をつける
-    return b.path.localeCompare(a.path);
-  })
-  .slice(0, 2); // 最新の2件を安全にスライス
-
-
+const latestNews = useRouter().getRoutes()
+  .filter(route => route.path.startsWith("/news/posts/") && route.meta.sortKey)
+  .sort((a, b) => String(b.meta.sortKey).localeCompare(String(a.meta.sortKey)) || b.path.localeCompare(a.path))
+  .slice(0, 4)
+  .map(({ path, meta }) => ({
+    path,
+    year: String(meta.year),
+    date: String(meta.date),
+    title: String(meta.title).replace(/^【[^】]+】/, ""),
+    category: meta.category === "Update" ? "モデル更新" : String(meta.category || "お知らせ"),
+    thumbnail: typeof meta.thumbnail === "string" ? meta.thumbnail : undefined,
+  }));
 </script>
+
+<style scoped>
+#activity.news-section { background: white; padding-block: clamp(40px, 4.5vw, 64px); }
+.news-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: 27px; }
+#activity h2 { display: flex; align-items: baseline; gap: 12px; font-size: clamp(26px, 3vw, 32px); }
+#activity h2::before { content: none; }
+.news-heading small { font-size: 11px; letter-spacing: .1em; }
+.news-index { display: inline-flex; align-items: center; gap: .75rem; padding: 12px 24px; border: 1px solid #d6d9df; border-radius: 99px; color: var(--navy); font-size: 13px; font-weight: 700; }
+.news-index:hover { border-color: var(--red); color: var(--red); }
+.news-list { border-top: 1px solid #d6d9df; }
+.news-row { display: grid; grid-template-columns: clamp(96px, 10vw, 120px) minmax(0, 1fr) auto; align-items: center; gap: 20px; padding: 24px 0; border-bottom: 1px solid #d6d9df; color: var(--navy); }
+.news-row time { font: 600 14px/1.5 "Source Code Pro", monospace; }
+.news-category { display: inline-block; padding: 3px 12px; border-radius: 99px; background: #eef3fa; color: var(--blue); font-size: 11px; font-weight: 700; }
+.news-copy h3 { margin-top: 9px; font-size: 18px; font-weight: 700; line-height: 1.55; }
+.news-thumbnail { width: clamp(140px, 16vw, 200px); aspect-ratio: 16/9; height: auto; border-radius: 8px; background: #f4f6fa; object-fit: contain; }
+li:first-child .news-row { padding-block: 28px; }
+li:first-child .news-thumbnail { width: clamp(180px, 23vw, 280px); }
+li:first-child h3 { font-size: clamp(20px, 2vw, 25px); }
+.news-row:hover h3, .news-row:focus-visible h3 { color: var(--red); text-decoration: underline; text-underline-offset: .22em; }
+@media(max-width: 640px) {
+  .news-row { grid-template-columns: minmax(0, 1fr) auto; gap: 5px 12px; padding-block: 19px; }
+  .news-row time { font-size: 12px; }
+  .news-copy { grid-column: 1; }
+  .news-thumbnail, li:first-child .news-thumbnail { grid-column: 2; grid-row: 1 / span 2; width: clamp(78px, 23vw, 130px); }
+  .news-copy h3, li:first-child h3 { font-size: 15px; }
+  .news-index { padding: 10px 15px; }
+}
+</style>

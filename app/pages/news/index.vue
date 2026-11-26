@@ -3,7 +3,7 @@
     <div class="max-w-5xl mx-auto">
       <div class="mb-12 flex justify-start">
         <NuxtLink to="/"
-          class="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-widest text-slate-400 hover:text-[#0078B8] transition-colors group">
+          class="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-widest text-slate-400 hover:text-miori-blue transition-colors group">
           <i
             class="fa-solid fa-arrow-left text-[10px] transition-transform duration-300 group-hover:-translate-x-1"></i>
           RETURN_TO_TOP
@@ -11,7 +11,7 @@
       </div>
 
       <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl font-sans font-black text-[#002058] tracking-[0.2em] uppercase">
+        <h1 class="text-4xl md:text-5xl font-sans font-black text-miori-navy tracking-[0.2em] uppercase">
           News
         </h1>
         <p class="text-xs font-sans font-bold text-slate-500 tracking-widest mt-3">
@@ -28,12 +28,12 @@
               {{ item.year }}.{{ item.date }}
             </span>
             <h2
-              class="text-sm md:text-base font-sans font-bold text-slate-800 group-hover:text-[#0078B8] transition-colors flex-1 leading-relaxed">
+              class="text-sm md:text-base font-sans font-bold text-slate-800 group-hover:text-miori-blue transition-colors flex-1 leading-relaxed">
               {{ item.title }}
             </h2>
           </div>
           <div
-            class="text-slate-400 group-hover:text-[#0078B8] transition-all duration-300 group-hover:translate-x-1 pr-2">
+            class="text-slate-400 group-hover:text-miori-blue transition-all duration-300 group-hover:translate-x-1 pr-2">
             <i class="fa-solid fa-arrow-right-long text-sm"></i>
           </div>
         </NuxtLink>
@@ -45,14 +45,14 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 
-const description = "汐猫みおの活動、配信、3Dモデルなどに関する最新情報を掲載しています。";
+const description = "深瀬みおりの活動、配信、3Dモデルなどに関する最新情報を掲載しています。";
 
 useSeoMeta({
-  title: "最新情報 | 汐猫みお Official Site",
+  title: "最新情報 | 深瀬みおり Official Site",
   description,
-  ogTitle: "最新情報 | 汐猫みお Official Site",
+  ogTitle: "最新情報 | 深瀬みおり Official Site",
   ogDescription: description,
-  ogImage: "https://skyfelis.jp/ogp-v4.jpg",
+  ogImage: "https://skyfelis.jp/ogp-miori.jpg",
   ogType: "website",
   twitterCard: "summary_large_image",
   twitterSite: "@skyfelis",

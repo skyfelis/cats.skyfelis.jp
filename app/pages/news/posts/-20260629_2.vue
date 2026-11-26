@@ -17,10 +17,11 @@ definePageMeta({
     year: "2026",
     date: "06.29",
     sortKey: "20260629_2",
+    thumbnail: "/images/miori-logo.webp",
     category: "お知らせ", // バッジに表示したいテキストをここに書くだけ！
 });
 
 useSeoMeta({
-    title: "今後の活動について / 2026-06-29 | 汐猫みお Official",
+    title: "今後の活動について / 2026-06-29 | 深瀬みおり Official",
 });
 </script>

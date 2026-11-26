@@ -28,8 +28,8 @@ export default defineNuxtConfig({
         { name: "viewport", content: "width=device-width, initial-scale=1" },
       ],
       link: [
-        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico?v=miori" },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png?v=miori' },
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=BIZ+UDPGothic:wght@400;700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap'

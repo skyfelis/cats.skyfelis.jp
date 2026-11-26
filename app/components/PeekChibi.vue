@@ -1,16 +1,7 @@
 <template>
   <Transition name="chibi-peek">
     <div v-if="isReady && isEnabled && isPeeking" class="peek-chibi">
-      <NuxtImg
-        src="/images/chibi-v4.png"
-        format="webp"
-        quality="82"
-        alt=""
-        width="1254"
-        height="1254"
-        loading="lazy"
-        decoding="async"
-      />
+      <img src="/images/miori-chibi-peek.webp" width="480" height="480" loading="lazy" decoding="async" alt="" />
 
       <p class="chibi-message" role="status" aria-live="polite">
         {{ currentMessage }}

@@ -12,7 +12,7 @@
         </div>
 
         <h1
-          class="text-2xl md:text-3xl font-sans font-black text-[#002058] leading-relaxed pb-3 text-center"
+          class="text-2xl md:text-3xl font-sans font-black text-miori-navy leading-relaxed pb-3 text-center"
         >
           プライバシーポリシー
         </h1>
@@ -26,15 +26,15 @@
           class="text-sm md:text-base text-slate-600 leading-loose space-y-16 font-medium border-t border-slate-100 pt-10"
         >
           <p class="text-slate-500 leading-relaxed pl-0">
-            汐猫みお（以下、「当方」といいます。）は、当方の提供するウェブサイト（以下、「本サイト」といいます。）における、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます。）を定めます。
+            深瀬みおり（以下、「当方」といいます。）は、当方の提供するウェブサイト（以下、「本サイト」といいます。）における、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます。）を定めます。
           </p>
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#002058] flex items-center gap-3 pl-0"
+              class="text-lg font-black text-miori-navy flex items-center gap-3 pl-0"
             >
               <span
-                class="w-1.5 h-6 bg-[#0078B8] rounded-full block animate-pulse"
+                class="w-1.5 h-6 bg-miori-blue rounded-full block animate-pulse"
               ></span>
               第1条（個人情報の利用目的）
             </h2>
@@ -64,9 +64,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#002058] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
+              class="text-lg font-black text-miori-navy flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
             >
-              <span class="text-[#0078B8] font-mono text-sm">#</span>
+              <span class="text-miori-blue font-mono text-sm">#</span>
               第2条（個人情報の第三者提供）
             </h2>
             <div class="space-y-4 text-slate-500">
@@ -93,9 +93,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#002058] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
+              class="text-lg font-black text-miori-navy flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
             >
-              <span class="text-[#0078B8] font-mono text-sm">#</span>
+              <span class="text-miori-blue font-mono text-sm">#</span>
               第3条（免責事項）
             </h2>
             <div class="space-y-4 text-slate-500">
@@ -128,9 +128,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#002058] flex items-center gap-3 pl-0"
+              class="text-lg font-black text-miori-navy flex items-center gap-3 pl-0"
             >
-              <span class="w-1.5 h-6 bg-[#0078B8] rounded-full block"></span>
+              <span class="w-1.5 h-6 bg-miori-blue rounded-full block"></span>
               第4条（お問い合わせ）
             </h2>
             <div class="pl-5 text-slate-500">
@@ -145,7 +145,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "プライバシーポリシー | 汐猫みお Official",
+  title: "プライバシーポリシー | 深瀬みおり Official",
   description:
     "当サイトおよび各種窓口における個人情報の取り扱いに関するプライバシーポリシーです。",
 });

@@ -6,10 +6,9 @@
       : 'top-0 left-0 translate-x-0 w-full bg-white border-b border-slate-200/60 py-2.5 lg:py-1.5 px-5 lg:px-16 shadow-none duration-77 ease-out'
       ">
       <div class="flex items-center h-full">
-        <NuxtLink to="/" aria-label="汐猫みお ホーム">
+        <NuxtLink to="/" aria-label="深瀬みおり ホーム">
           <div>
-            <NuxtImg src="/images/logo-skyfelis.png" format="webp" width="2172" height="724" quality="82" alt="汐猫みお"
-              class="w-32 lg:w-40 transition-transform duration-300 hover:scale-[1.02]" />
+            <img src="/images/miori-logo.webp" width="1086" height="362" alt="深瀬みおり" class="w-32 lg:w-40" />
           </div>
         </NuxtLink>
       </div>
@@ -17,9 +16,10 @@
       <nav class="hidden lg:flex items-center" aria-label="メインナビゲーション">
         <ul class="flex items-center gap-5 border-l border-slate-200 pl-8 h-5">
           <li v-for="item in primaryNavigation" :key="item.to">
-            <NuxtLink :to="item.to" :title="item.description"
-              class="text-[13px] font-sans font-extrabold uppercase tracking-widest text-[#081C44] hover:text-[#00CCFF] transition-colors">
-              {{ item.label }}
+            <NuxtLink :to="item.to"
+              class="text-[13px] font-sans font-extrabold uppercase tracking-widest text-[#081C44] hover:text-miori-red transition-colors">
+              <span class="block">{{ item.label }}</span>
+              <span class="block text-[10px] font-medium tracking-normal">{{ item.description }}</span>
             </NuxtLink>
           </li>
         </ul>
@@ -27,7 +27,7 @@
 
       <div class="hidden lg:flex items-center gap-6 text-slate-400">
         <a v-for="item in socialNavigation" :key="item.href" :href="item.href" target="_blank" rel="noopener noreferrer"
-          class="hover:text-[#00CCFF] transition-colors text-lg" :aria-label="`${item.label}を新しいタブで開く`" :title="item.label">
+          class="hover:text-miori-red transition-colors text-lg" :aria-label="`${item.label}を新しいタブで開く`" :title="item.label">
           <i :class="item.icon" aria-hidden="true"></i>
         </a>
       </div>
@@ -49,8 +49,7 @@
         class="fixed inset-0 bg-white z-[60] lg:hidden flex flex-col h-screen w-screen overflow-hidden">
         <div class="flex items-center justify-between w-full pt-2.5 px-5 shrink-0"
           :class="isScrolled ? 'mt-3 mx-4 w-[calc(100%-2rem)]' : 'mt-0'">
-          <NuxtImg src="/images/logo-skyfelis.png" format="webp" width="2172" height="724" quality="82" alt="汐猫みお"
-            class="w-32 opacity-90" />
+          <img src="/images/miori-logo.webp" width="1086" height="362" alt="深瀬みおり" class="w-32 lg:w-40" />
 
           <button ref="closeMenuButton" type="button" @click="closeMenu"
             class="flex flex-col justify-center items-center w-8.5 h-8.5 rounded-full bg-slate-50 text-[#081C44] border border-slate-100 shadow-sm"
@@ -66,16 +65,17 @@
           <nav class="w-full text-center my-auto space-y-8" aria-label="モバイルナビゲーション">
             <ul class="space-y-4 text-lg font-sans font-black tracking-[0.2em] text-[#081C44] uppercase">
               <li v-for="item in primaryNavigation" :key="item.to">
-                <NuxtLink :to="item.to" :title="item.description" @click="closeMenu"
-                  class="hover:text-[#00CCFF] transition-colors block py-1">
-                  {{ item.label }}
+                <NuxtLink :to="item.to" @click="closeMenu"
+                  class="hover:text-miori-red transition-colors block py-1">
+                  <span class="block">{{ item.label }}</span>
+              <span class="block text-[10px] font-medium tracking-normal">{{ item.description }}</span>
                 </NuxtLink>
               </li>
             </ul>
 
             <div class="flex items-center justify-center gap-8 text-slate-400 text-lg pt-4">
               <a v-for="item in socialNavigation" :key="item.href" :href="item.href" target="_blank" rel="noopener noreferrer" @click="closeMenu"
-                class="hover:text-[#00CCFF] transition-colors" :aria-label="`${item.label}を新しいタブで開く`">
+                class="hover:text-miori-red transition-colors" :aria-label="`${item.label}を新しいタブで開く`">
                 <i :class="item.icon" aria-hidden="true"></i>
               </a>
             </div>

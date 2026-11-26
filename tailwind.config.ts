@@ -12,6 +12,15 @@ export default <Partial<Config>>{
   ],
   theme: {
     extend: {
+      colors: {
+        miori: {
+          navy: "#21385f",
+          blue: "#315e9b",
+          red: "#b32b40",
+          wine: "#902138",
+          blush: "#ffb6bf",
+        },
+      },
       fontFamily: {
         // 通常の文章用（プロポーショナルUDゴシック）
         sans: ['"BIZ UDPGothic"', "sans-serif"],

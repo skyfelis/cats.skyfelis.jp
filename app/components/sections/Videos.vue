@@ -3,8 +3,8 @@
     <div class="section-container">
       <div class="section-heading"><div><p class="eyebrow">LEARN &amp; PLAY</p><h2 id="videos-title">Contents <span>動画・配信</span></h2></div><a class="text-link" href="https://youtube.com/@skyfelis" target="_blank" rel="noopener noreferrer">YouTubeチャンネルへ <span aria-hidden="true">↗</span></a></div>
       <a class="channel-feature" href="https://youtube.com/@skyfelis" target="_blank" rel="noopener noreferrer">
-        <div class="channel-art" aria-hidden="true"><span class="channel-play">▶</span><span>SHIONE MIO<br /><strong>LEARNING & GAMING</strong></span><span class="channel-star">✦</span><span class="channel-dot channel-dot-a"></span><span class="channel-dot channel-dot-b"></span></div>
-        <div class="channel-copy"><p class="eyebrow">YOUTUBE</p><h3>学ぶ時間も、<br />遊ぶ時間も。</h3><p>情報学・情報セキュリティの教育動画、ゲーム実況、雑談配信。気になるテーマから、みおのチャンネルをのぞいてみてください。</p><span class="text-link">動画・配信アーカイブを見る <span aria-hidden="true">↗</span></span></div>
+        <div class="channel-art" aria-hidden="true"><img class="channel-portrait" src="/images/miori-chibi-peek.webp" width="480" height="480" loading="lazy" alt="" /><span class="channel-play">▶</span><span>FUKASE MIORI<br /><strong>LEARNING & GAMING</strong></span><span class="channel-star">✦</span><span class="channel-dot channel-dot-a"></span><span class="channel-dot channel-dot-b"></span></div>
+        <div class="channel-copy"><p class="eyebrow">YOUTUBE</p><h3>学ぶ時間も、<br />遊ぶ時間も。</h3><p>情報学・情報セキュリティの教育動画、ゲーム実況、雑談配信。気になるテーマから、みおりのチャンネルをのぞいてみてください。</p><span class="text-link">動画・配信アーカイブを見る <span aria-hidden="true">↗</span></span></div>
       </a>
       <button class="motion-control contents-motion-control" type="button" :aria-pressed="motionPaused" @click="motionPaused = !motionPaused">
         {{ motionPaused ? 'Contentsの動きを再開' : 'Contentsの動きを止める' }}
@@ -18,6 +18,9 @@ const motionPaused = ref(false);
 </script>
 
 <style scoped>
+.channel-art { background: linear-gradient(125deg, var(--navy) 20%, var(--blue)); }
+.channel-portrait { position: absolute; right: -4%; bottom: -5%; width: 58%; max-height: 95%; object-fit: contain; object-position: bottom; }
+
 .channel-art > span:not(.channel-star):not(.channel-dot) {
   position: relative;
   z-index: 1;
