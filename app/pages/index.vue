@@ -2,8 +2,8 @@
   <div ref="home" class="brand-home">
     <SectionsHero />
     <SectionsNews />
-    <SectionsVideos />
     <SectionsProfileSection />
+    <SectionsVideos />
     <SectionsFanKit />
     <SectionsSocialsSection />
     <SectionsModelSpec />
@@ -32,13 +32,13 @@ onMounted(() => {
 onBeforeUnmount(() => revealObserver?.disconnect());
 
 useSeoMeta({
-  title: "汐猫みお Official Site",
-  ogTitle: "汐猫みお Official Site",
+  title: "深瀬みおり Official Site",
+  ogTitle: "深瀬みおり Official Site",
   description:
-    "情報セキュリティと情報法を学びながら、プログラミング、ゲーム、旅行などの話題を気ままに発信する、青い世界の猫Virtual YouTuber「汐猫みお」の公式サイトです。",
+    "情報セキュリティと情報法を学びながら、プログラミング、ゲーム、旅行などの話題を気ままに発信する、青い世界の猫Virtual YouTuber「深瀬みおり」の公式サイトです。",
   ogDescription:
-    "情報セキュリティと情報法を学びながら、プログラミング、ゲーム、旅行などの話題を気ままに発信する、青い世界の猫 Virtual YouTuber「汐猫みお」の公式ポータルサイトです。",
-  ogImage: "https://skyfelis.jp/ogp-v4.jpg",
+    "情報セキュリティと情報法を学びながら、プログラミング、ゲーム、旅行などの話題を気ままに発信する、青い世界の猫 Virtual YouTuber「深瀬みおり」の公式ポータルサイトです。",
+  ogImage: "https://skyfelis.jp/ogp-miori.jpg",
   twitterCard: "summary_large_image",
   twitterSite: "@skyfelis",
   twitterCreator: "@skyfelis",

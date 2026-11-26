@@ -1,31 +1,62 @@
 <template>
-  <section class="brand-hero" :class="{ 'motion-paused': motionPaused }" aria-labelledby="hero-title">
-    <div class="hero-orbit" aria-hidden="true"></div>
-    <span class="hero-star" aria-hidden="true">✦</span>
+  <section class="brand-hero" aria-labelledby="hero-title">
     <div class="hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">SHIONE MIO · OFFICIAL WEBSITE</p>
-        <h1 id="hero-title"><img src="/images/logo-skyfelis.png" width="2172" height="724" alt="汐猫みお / SHIONE MIO / @skyfelis" fetchpriority="high" /></h1>
-        <p class="hero-tagline">知るって、たのしい。<br />遊ぶって、おもしろい。</p>
-        <p class="hero-description">情報学・情報セキュリティから、ゲームと日常まで。<br class="desktop-break" />学びも遊びも一緒に楽しむ、青い世界の猫。</p>
-        <p class="hero-role">VTUBER / STREAMER / YOUTUBER</p>
+        <h1 id="hero-title"><img src="/images/miori-logo.webp" width="1086" height="362" alt="深瀬みおり" /></h1>
+        <p class="hero-tagline">情報学とゲームが好きな、<br />青い世界の猫VTuber。</p>
         <div class="hero-actions">
           <a class="brand-button" href="https://youtube.com/@skyfelis" target="_blank" rel="noopener noreferrer">YouTubeを見る <span aria-hidden="true">↗</span></a>
-          <a class="hero-social" href="https://x.com/skyfelis" target="_blank" rel="noopener noreferrer" aria-label="Xで活動情報を見る（新しいタブ）">X <span aria-hidden="true">↗</span></a>
+          <a class="hero-social" href="#profile">プロフィール <span aria-hidden="true">↓</span></a>
         </div>
       </div>
       <div class="hero-visual">
-        <span class="hero-visual-label" aria-hidden="true">HELLO, WORLD.</span>
         <picture class="hero-character">
-          <img src="/images/hero-v4.png" alt="紺色のスーツ姿で手を振る汐猫みお Version 4" width="1024" height="1536" fetchpriority="high" decoding="async" />
+          <img src="/images/miori-front.webp" alt="猫耳と眼鏡に、紺色のジャージとヘッドホンを合わせた深瀬みおり" width="810" height="1440" fetchpriority="high" decoding="async" />
         </picture>
-        <span class="hero-signature" aria-hidden="true">SHIONE MIO <span>01</span></span>
       </div>
     </div>
-    <div class="hero-bottom"><span>LEARN. PLAY. CONNECT.</span><button class="motion-control" type="button" @click="motionPaused = !motionPaused" :aria-pressed="motionPaused">{{ motionPaused ? "動きを再開" : "動きを止める" }}</button><a href="#activity">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+    <div class="hero-bottom"><a href="#activity">お知らせへ <span aria-hidden="true">↓</span></a></div>
   </section>
 </template>
 
-<script setup lang="ts">
-const motionPaused = ref(false);
-</script>
+<style scoped>
+.brand-hero {
+  background: #eff8fc url("/images/banner.png") center / cover no-repeat;
+}
+.hero-bottom { justify-content: flex-end; }
+.hero-bottom a, .hero-actions .hero-social {
+  background-color: #fff;
+}
+.hero-bottom a {
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.hero-inner { column-gap: clamp(20px,4vw,70px); }
+.hero-visual {
+  overflow: hidden;
+  align-self: center;
+  height: clamp(440px,43vw,560px);
+  border-radius: 48% 48% 16px 16px;
+  background: radial-gradient(#fff9 1.3px, transparent 1.5px) 0 0 / 14px 14px,
+    linear-gradient(148deg,#e0eafd 14%,#a7c4ed 68%,#789fce);
+  border-bottom: 6px solid var(--red);
+}
+.hero-visual::before { inset: 12px; width: auto; height: auto; border-radius: inherit; border: 1px solid #ffffffa8; background: none; }
+.hero-character { height: 100%; }
+.hero-character img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero-tagline { white-space: normal; }
+.hero-actions a { border-radius: 999px; }
+@media(max-width:640px) {
+  .brand-hero {
+    background-position: center top;
+    background-size: auto clamp(255px, 73vw, 340px);
+  }
+  .hero-bottom a { width: auto; }
+  .hero-inner { padding-top: 16px; }
+  .hero-actions { flex-wrap: wrap; justify-content: center; }
+  .hero-actions a { white-space: nowrap; padding-inline: 15px; gap: 8px; font-size: 13px; }
+  .hero-visual { max-width: 380px; height: clamp(245px,70vw,320px); margin: 0 0 12px; }
+  .hero-copy h1 { max-width: 280px; }
+}
+</style>

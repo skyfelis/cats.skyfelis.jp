@@ -20,10 +20,11 @@ definePageMeta({
     year: "2026",
     date: "06.29",
     sortKey: "20260629_1",
+    thumbnail: "/images/miori-design.webp",
     category: "Update",
 });
 
 useSeoMeta({
-    title: "3Dモデルのリニューアルについて / 2026-06-29 | 汐猫みお Official",
+    title: "3Dモデルのリニューアルについて / 2026-06-29 | 深瀬みおり Official",
 });
 </script>

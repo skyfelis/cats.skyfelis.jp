@@ -2,7 +2,7 @@
   <section
     id="contact"
 
-    class="relative z-10 overflow-hidden bg-[#002058] px-6 py-20 font-sans antialiased transition-all duration-[1000ms] ease-out transform md:py-24"
+    class="relative z-10 overflow-hidden bg-miori-navy px-6 py-20 font-sans antialiased transition-all duration-[1000ms] ease-out transform md:py-24"
   >
     <div
       class="pointer-events-none absolute -left-16 top-12 h-44 w-44 rounded-full bg-[#8EDBFA]/35"
@@ -11,7 +11,7 @@
       class="pointer-events-none absolute -right-12 bottom-8 h-56 w-56 rounded-full bg-[#79A9F3]/20"
     ></div>
     <div
-      class="pointer-events-none absolute right-[18%] top-12 h-8 w-8 rounded-full bg-[#0078B8]/25"
+      class="pointer-events-none absolute right-[18%] top-12 h-8 w-8 rounded-full bg-miori-blue/25"
     ></div>
 
     <div class="relative mx-auto max-w-6xl">
@@ -27,25 +27,16 @@
             <div
               class="absolute bottom-0 left-1/2 h-52 w-52 -translate-x-1/2 rounded-full bg-gradient-to-br from-[#DDF5FF] to-[#E9EEFF] md:h-64 md:w-64"
             ></div>
-            <NuxtImg
-              src="/images/chibi-guide-v4.png"
-              format="webp"
-              quality="82"
-              alt="両手を広げてお問い合わせをご案内するミニキャラの汐猫みお"
-              width="1254"
-              height="1254"
-              loading="lazy"
-              class="relative z-10 h-[285px] w-auto object-contain md:h-[390px] lg:h-[430px]"
-            />
+            <img src="/images/miori-chibi-contact.webp" width="860" height="860" loading="lazy" decoding="async" alt="封筒を手にお問い合わせ先を案内する深瀬みおりのミニキャラ" class="relative z-10 h-[285px] w-auto object-contain md:h-[390px] lg:h-[430px]" />
           </div>
 
           <div class="px-7 pb-10 pt-5 sm:px-10 md:py-14 md:pr-14 lg:pr-20">
             <div class="mb-8 flex flex-col items-start select-none">
               <div
-                class="mb-4 h-1 w-12 rounded-full bg-gradient-to-r from-[#0078B8] to-[#79A9F3]"
+                class="mb-4 h-1 w-12 rounded-full bg-gradient-to-r from-miori-blue to-[#79A9F3]"
               ></div>
               <h2
-                class="text-4xl font-bold leading-none tracking-wider text-[#002058] md:text-5xl"
+                class="text-4xl font-bold leading-none tracking-wider text-miori-navy md:text-5xl"
               >
                 Contact
               </h2>
@@ -62,13 +53,13 @@
               お仕事のご依頼、コラボレーションのご相談、その他お問い合わせは、専用フォームよりお気軽にお送りください。
             </p>
             <p class="mt-3 text-sm font-medium text-slate-500">
-              みおが内容を確認して、丁寧にお返事します。
+              みおりが内容を確認して、丁寧にお返事します。
             </p>
 
             <div class="pt-8">
               <NuxtLink
                 to="/contact"
-                class="group flex w-full min-w-0 items-center justify-between rounded-full bg-[#002058] px-8 py-4 text-sm font-black tracking-widest text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0078B8] hover:text-[#002058] hover: sm:w-auto sm:min-w-[320px]"
+                class="group flex w-full min-w-0 items-center justify-between rounded-full bg-miori-red px-8 py-4 text-sm font-black tracking-widest text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-miori-wine hover:text-white sm:w-auto sm:min-w-[320px]"
               >
                 <span>お問い合わせフォームへ</span>
                 <i

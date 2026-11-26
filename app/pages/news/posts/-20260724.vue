@@ -15,10 +15,11 @@ definePageMeta({
     year: "2026",
     date: "07.24",
     sortKey: "20260724",
+    thumbnail: "/images/miori-views.webp",
     category: "Update", // バッジに表示したいテキストをここに書くだけ！
 });
 
 useSeoMeta({
-    title: "3Dモデル更新のお知らせ / 2026-07-24 | 汐猫みお Official",
+    title: "3Dモデル更新のお知らせ / 2026-07-24 | 深瀬みおり Official",
 });
 </script>

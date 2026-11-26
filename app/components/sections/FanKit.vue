@@ -3,9 +3,9 @@
     class="bg-white py-24 px-6 relative z-40 border-t border-slate-100 transition-all duration-[1000ms] ease-out transform font-sans antialiased text-slate-800">
     <div class="max-w-6xl mx-auto">
       <div class="mb-16 flex flex-col items-start select-none">
-        <div class="w-12 h-1 bg-gradient-to-r from-[#0078B8] to-[#002058] rounded-full mb-4"></div>
+        <div class="w-12 h-1 bg-gradient-to-r from-miori-red to-miori-blue rounded-full mb-4"></div>
 
-        <h2 class="text-4xl md:text-5xl font-sans font-bold tracking-wider text-[#002058] leading-none">
+        <h2 class="text-4xl md:text-5xl font-sans font-bold tracking-wider text-miori-navy leading-none">
           Fan Kit
         </h2>
 
@@ -18,12 +18,12 @@
         <!-- ファンネーム -->
         <div
           class="cat-ear-card bg-slate-50/60 border border-slate-100 p-8 rounded-2xl space-y-4">
-          <div class="flex items-center gap-3 text-[#002058]">
-            <i class="fa-solid fa-users text-[#0078B8] text-lg"></i>
+          <div class="flex items-center gap-3 text-miori-navy">
+            <i class="fa-solid fa-users text-miori-blue text-lg"></i>
             <h3 class="text-base font-bold font-sans">ファンネーム</h3>
           </div>
 
-          <p class="text-2xl font-sans font-black text-[#002058] tracking-wide pt-1">
+          <p class="text-2xl font-sans font-black text-miori-navy tracking-wide pt-1">
             観測者
             <span class="text-xs text-slate-500 font-medium font-mono block sm:inline sm:ml-1">
               (型推論: Observer)
@@ -38,31 +38,42 @@
         <!-- ハッシュタグ -->
         <div
           class="cat-ear-card bg-slate-50/60 border border-slate-100 p-8 rounded-2xl space-y-4">
-          <div class="flex items-center gap-3 text-[#002058]">
-            <i class="fa-solid fa-hashtag text-[#0078B8] text-lg"></i>
+          <div class="flex items-center gap-3 text-miori-navy">
+            <i class="fa-solid fa-hashtag text-miori-blue text-lg"></i>
             <h3 class="text-base font-bold font-sans">ハッシュタグ</h3>
           </div>
 
           <div class="space-y-1.5 pt-1 font-mono">
             <div class="flex items-center gap-2">
-              <span class="text-xs font-bold bg-[#002058] text-white px-2 py-0.5 rounded-md text-[10px] select-none">
+              <span class="text-xs font-bold bg-miori-navy text-white px-2 py-0.5 rounded-md text-[10px] select-none">
                 LIVE
               </span>
 
-              <a href="https://x.com/search?q=%23shiomioLive" target="_blank" rel="noopener noreferrer"
-                class="text-sm font-black text-[#002058] hover:text-[#0078B8] transition-colors cursor-pointer">
-                #shiomioLive
+              <a href="https://x.com/search?q=%23%E3%81%BF%E3%81%8A%E3%82%8A%E8%A6%B3%E6%B8%AC%E4%B8%AD" target="_blank" rel="noopener noreferrer"
+                class="text-sm font-black text-miori-navy hover:text-miori-blue transition-colors cursor-pointer">
+                #みおり観測中
               </a>
             </div>
 
             <div class="flex items-center gap-2">
-              <span class="text-xs font-bold bg-[#002058] text-white px-2 py-0.5 rounded-md text-[10px] select-none">
+              <span class="text-xs font-bold bg-miori-navy text-white px-2 py-0.5 rounded-md text-[10px] select-none">
                 ART
               </span>
 
-              <a href="https://x.com/search?q=%23shiomioarts" target="_blank" rel="noopener noreferrer"
-                class="text-sm font-black text-[#002058] hover:text-[#0078B8] transition-colors cursor-pointer">
-                #shiomioarts
+              <a href="https://x.com/search?q=%23%E6%B7%B1%E7%80%AC%E7%94%BB%E5%BB%8A" target="_blank" rel="noopener noreferrer"
+                class="text-sm font-black text-miori-navy hover:text-miori-blue transition-colors cursor-pointer">
+                #深瀬画廊
+              </a>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold bg-miori-navy text-white px-2 py-0.5 rounded-md text-[10px] select-none">
+                AI
+              </span>
+
+              <a href="https://x.com/search?q=%23%E3%81%BF%E3%81%8A%E3%82%8AAI%E7%94%BB%E5%BB%8A" target="_blank" rel="noopener noreferrer"
+                class="text-sm font-black text-miori-navy hover:text-miori-blue transition-colors cursor-pointer">
+                #みおりAI画廊
               </a>
             </div>
           </div>
@@ -75,19 +86,17 @@
         <!-- ファンマーク -->
         <div
           class="cat-ear-card bg-slate-50/60 border border-slate-100 p-8 rounded-2xl space-y-4 sm:col-span-2 lg:col-span-1">
-          <div class="flex items-center gap-3 text-[#002058]">
-            <i class="fa-solid fa-paw text-[#0078B8] text-lg"></i>
+          <div class="flex items-center gap-3 text-miori-navy">
+            <i class="fa-solid fa-paw text-miori-blue text-lg"></i>
             <h3 class="text-base font-bold font-sans">ファンマーク</h3>
           </div>
 
-          <p class="text-4xl font-sans font-black text-[#002058] pt-1">
-            🐾
-            <span class="text-xl text-slate-300 ml-1">/</span>
-            💻
+          <p class="text-4xl font-sans font-black text-miori-navy pt-1">
+            🟥🟦🐈️
           </p>
 
           <p class="text-xs md:text-sm text-slate-500 leading-relaxed font-medium">
-            名前の後ろやプロフィールに刻むための識別子（Endpoint）です。猫の肉球とノートPCのセット！
+            赤、青、猫の順に並べたファンマークです。SNSの名前の後ろやプロフィールにどうぞ。
           </p>
         </div>
 

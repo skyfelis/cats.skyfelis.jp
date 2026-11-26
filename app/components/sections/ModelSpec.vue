@@ -4,15 +4,14 @@
     <div class="max-w-6xl mx-auto">
       <div class="mb-12 flex flex-wrap items-end justify-between gap-6">
         <div>
-          <div class="w-12 h-1 bg-gradient-to-r from-[#0078B8] to-[#002058] rounded-full mb-4"></div>
-          <h2 class="text-4xl md:text-5xl font-bold text-[#002058] leading-none">3D Model</h2>
+          <div class="w-12 h-1 bg-gradient-to-r from-miori-red to-miori-blue rounded-full mb-4"></div>
+          <h2 class="text-4xl md:text-5xl font-bold text-miori-navy leading-none">3D Model</h2>
           <p class="text-xs text-slate-500 tracking-widest pt-3">キャラクターデザイン・3Dモデル</p>
         </div>
-        <span class="bg-[#002058] text-white font-mono text-xs px-4 py-2 rounded-full">Version 4</span>
       </div>
 
       <p class="mb-6 text-sm text-slate-600 leading-loose">
-        紺色のスーツに、猫耳と眼鏡。汐猫みおのオリジナルアバターです。
+        紺のジャージにヘッドホン。長い髪には赤い差し色が入っています。深瀬みおりのオリジナルアバターです。
       </p>
 
       <div class="model-switch" role="group" aria-label="設定画と3Dモデルの表示切り替え">
@@ -25,10 +24,10 @@
 
       <div id="model-spec-panel" class="model-panel" role="region" :aria-label="selectedView.description">
         <Transition name="model-fade" mode="out-in">
-          <NuxtImg :key="selectedView.id" :src="selectedView.src" format="webp" quality="88"
-            :width="selectedView.width" :height="selectedView.height" sizes="sm:100vw lg:1152px"
+          <img :key="selectedView.id" :src="selectedView.src"
+            :width="selectedView.width" :height="selectedView.height"
             loading="lazy" decoding="async" :alt="selectedView.description"
-            class="w-full h-auto" />
+            class="w-full h-full object-contain" />
         </Transition>
       </div>
 
@@ -39,27 +38,25 @@
 
 <script setup lang="ts">
 const views = [
-  {
-    id: 'model', label: '3Dモデル', src: '/images/model-v4-views.png', width: 1920, height: 1080,
-    description: '汐猫みお Version 4：紺色のスーツを着た3Dモデルの正面・背面・左右側面',
-  },
-  {
-    id: 'design', label: '設定画', src: '/images/model-v4-design.png', width: 1672, height: 941,
-    description: '汐猫みお Version 4：猫耳・眼鏡・紺色のスーツのキャラクター設定画',
-  },
+  { id: 'model', label: 'モデル三面図', src: '/images/miori-views.webp', width: 2106, height: 1248, description: '深瀬みおりのモデル三面図' },
+  { id: 'front', label: '正面', src: '/images/miori-front.webp', width: 810, height: 1440, description: '深瀬みおりの正面' },
+  { id: 'right', label: '右側面', src: '/images/miori-right.webp', width: 810, height: 1440, description: '深瀬みおりの右側面' },
+  { id: 'back', label: '背面', src: '/images/miori-back.webp', width: 810, height: 1440, description: '深瀬みおりの背面' },
+  { id: 'design', label: 'イラスト三面図', src: '/images/miori-design.webp', width: 1672, height: 941, description: '深瀬みおりのイラスト三面図' },
 ] as const;
-const activeView = ref<'model' | 'design'>('model');
+const activeView = ref<(typeof views)[number]['id']>('model');
 const selectedView = computed(() => views.find(view => view.id === activeView.value) ?? views[0]);
 </script>
 
 <style scoped>
 .model-switch {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 4px;
   padding: 5px;
   margin-bottom: 20px;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: 18px;
   background: var(--paper);
 }
 .model-switch button {
@@ -78,7 +75,7 @@ const selectedView = computed(() => views.find(view => view.id === activeView.va
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: white;
-  aspect-ratio: 16 / 9;
+  height: clamp(360px, 54vw, 720px);
 }
 .model-fade-enter-active, .model-fade-leave-active { transition: opacity .18s ease; }
 .model-fade-enter-from, .model-fade-leave-to { opacity: 0; }

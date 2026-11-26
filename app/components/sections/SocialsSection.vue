@@ -52,8 +52,8 @@ const socialLinks: SocialLink[] = [
     href: "https://github.com/skyfelis",
     icon: "fa-brands fa-github",
     iconStyle: "bg-slate-800 text-white",
-    actionStyle: "text-[#0078B8]",
-    hoverStyle: "hover:border-[#0078B8]/20 hover:bg-cyan-50/[0.01]",
+    actionStyle: "text-miori-blue",
+    hoverStyle: "hover:border-miori-blue/20 hover:bg-cyan-50/[0.01]",
     external: true,
   },
   {
@@ -79,9 +79,9 @@ const socialLinks: SocialLink[] = [
     class="relative z-10 bg-white px-6 py-20 font-sans antialiased transition-all duration-[1000ms] ease-out transform">
     <div class="mx-auto max-w-6xl">
       <div class="mb-12 flex flex-col items-start select-none">
-        <div class="mb-4 h-1 w-12 rounded-full bg-gradient-to-r from-[#0078B8] to-[#002058]"></div>
+        <div class="mb-4 h-1 w-12 rounded-full bg-gradient-to-r from-miori-red to-miori-blue"></div>
 
-        <h2 class="text-4xl font-bold leading-none tracking-wider text-[#002058] md:text-5xl">
+        <h2 class="text-4xl font-bold leading-none tracking-wider text-miori-navy md:text-5xl">
           Socials &amp; Links
         </h2>
 
@@ -103,7 +103,7 @@ const socialLinks: SocialLink[] = [
 
             <div class="min-w-0 space-y-2">
               <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
-                <h3 class="text-base font-bold text-[#002058]">
+                <h3 class="text-base font-bold text-miori-navy">
                   {{ item.name }}
                 </h3>
 

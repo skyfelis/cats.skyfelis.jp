@@ -17,16 +17,16 @@ useHead(() => ({
 }));
 useSeoMeta({
   ogUrl: () => canonicalUrl.value,
-  ogSiteName: "汐猫みお Official Site",
+  ogSiteName: "深瀬みおり Official Site",
   ogLocale: "ja_JP",
-  ogImage: "https://skyfelis.jp/ogp-v4.jpg",
+  ogImage: "https://skyfelis.jp/ogp-miori.jpg",
   ogImageWidth: 1200,
   ogImageHeight: 630,
   ogImageType: "image/jpeg",
-  ogImageAlt: "汐猫みお公式サイト：新ロゴと紺色スーツ姿のVersion 4アバター",
+  ogImageAlt: "深瀬みおり公式サイト：キャットロゴとジャージ姿の深瀬みおり",
   twitterCard: "summary_large_image",
-  twitterImage: "https://skyfelis.jp/ogp-v4.jpg",
-  twitterImageAlt: "汐猫みお公式サイト：新ロゴと紺色スーツ姿のVersion 4アバター",
+  twitterImage: "https://skyfelis.jp/ogp-miori.jpg",
+  twitterImageAlt: "深瀬みおり公式サイト：キャットロゴとジャージ姿の深瀬みおり",
   twitterSite: "@skyfelis",
   twitterCreator: "@skyfelis",
 });
@@ -65,7 +65,8 @@ p {
 }
 
 :where(a, button, input, textarea, select, [tabindex]):focus-visible {
-  outline: 3px solid #00ccff;
+  outline: 3px solid var(--blue);
+  box-shadow: 0 0 0 3px white;
   outline-offset: 4px;
 }
 
